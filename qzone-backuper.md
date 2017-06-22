@@ -2,7 +2,7 @@
 
 ## 安装
 
-可以科学上网的同学可到 [Chrome Web Store](https://chrome.google.com/webstore/detail/qq%E7%A9%BA%E9%97%B4%E5%B0%81%E5%8D%B0%E5%8A%A9%E6%89%8B/cpablhkjijifpkdnffelmmoakmjedffm) 下载。
+<del>可以科学上网的同学可到 [Chrome Web Store](https://chrome.google.com/webstore/detail/qq%E7%A9%BA%E9%97%B4%E5%B0%81%E5%8D%B0%E5%8A%A9%E6%89%8B/cpablhkjijifpkdnffelmmoakmjedffm) 下载。暂不可用</del>
 
 无法科学上网的同学可根据 [这篇](http://i.littletool.io/install_qzone_backup.html) 说明来安装。
 
