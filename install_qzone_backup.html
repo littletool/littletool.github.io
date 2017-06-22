@@ -5,7 +5,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>qzone-backuper</title>
+<title>install_qzone_backup</title>
 
 
 <style type="text/css">
@@ -328,93 +328,18 @@ kbd {
 
 <body>
 
-<h1 id="toc_0">QQ空间封印助手</h1>
-
-<h2 id="toc_1">安装</h2>
-
-<p>可以科学上网的同学可到 <a href="https://chrome.google.com/webstore/detail/qq%E7%A9%BA%E9%97%B4%E5%B0%81%E5%8D%B0%E5%8A%A9%E6%89%8B/cpablhkjijifpkdnffelmmoakmjedffm">Chrome Web Store</a> 下载。</p>
-
-<p>无法科学上网的同学可根据 <a href="http://i.littletool.io/install_qzone_backup.html">这篇</a> 说明来安装。</p>
-
-<h2 id="toc_2">简介</h2>
-
-<p>一个可以将自己QQ空间日志备份下来的 Chrome 插件。</p>
-
-<p>每个互联网产品都有一个生命周期，或者你只会一段时间使用它。QQ空间的第一批用户已经越来越少使用QQ空间，假如有一天QQ号被盗，丢失找不回来，不想用了，那曾经写过的文字，拍过的照片就会留在网络上没人能看到的角落。</p>
-
-<p>假如你觉得过去的尴尬文章还是需要Copy多一份，防止丢失，这个 Chrome 插件可以帮到你。</p>
-
-<p><br/></p>
-
-<p>它可以把QQ空间的日志打包保存成一个压缩文件，解压后有如下目录结构</p>
-
-<div><pre><code class="language-none">qzone-xxxxx (xxx 是QQ号）
-|--- 说明.txt
-└--- blog (日志)
-    └--- image (图片)
-        |--- 2007-01-01_00-00_xxxx-xxx-xx-xx (这是图片，可能是jpg，png，gif或webp格式）
-        |--- 2007-01-01_00-01_xxxx-xxx-xx-xx
-        └---- ....
-    |--- 2007-01-01_00-00-日志标题1.md (这是日志正文和评论，markdown格式，记事本也可以打开）
-    |--- 2007-01-01_00-01-日志标题2.md 
-    |--- ... 
-    └--- 2007-01-01_00-0n-日志标题n.md</code></pre></div>
-
-<p>日志的内容类似这样，需要markdown编辑器才能看到图片。</p>
-
-<div><pre><code class="language-none"># 标题
-2007-01-01 12:00
-
-正文正文正文
-正文正文正文
-![图片](image/2007-xxxx)
-还是正文还是正文
-
-评论：
-* 小A：Interesting
-    * 阿久：好嘢
-    * 小肥：哦啊哟
-* X：[挖鼻屎]
-* ... ...
-
-</code></pre></div>
-
-<h2 id="toc_3">预先说明</h2>
-
-<p>使用过程中遇到错误，先看本文后面的「已知问题」。</p>
-
-<h2 id="toc_4">.md 文件打开程序推荐</h2>
-
-<p><strong>Windows 推荐使用 <a href="http://markdownpad.com/">MarkdownPad</a>， MacOS 推荐使用 <a href="http://macdown.uranusjr.com/">MacDown</a>。</strong></p>
-
-<h2 id="toc_5">使用说明</h2>
+<h1 id="toc_0">QQ空间封印助手直接安装方法</h1>
 
 <ol>
-<li><p>安装好这个插件后，打开 qzone.com，登录后，那个有「封」字的图标就会亮起来。</p>
-
-<p><img src="static/pictures/qzone-click-icon.jpg" alt=""></p></li>
-<li><p>点击含「封」字的图标，再点「开始备份」，页面就会弹出提示正在备份，如果有很多日志和图片，可以先去泡杯茶。</p>
-
-<p><img src="static/pictures/qzone-popup.jpg" alt=""></p></li>
-<li><p>备份过程中可能会出现错误，但最终如果一切还算正常，在提示备份完成的同时会在弹框的底部出现一个下载按钮，点击下载即可得到日志的备份</p>
-
-<p><img src="static/pictures/qzone-backuped.jpg" alt=""></p></li>
-<li><p>解压得到的备份，看看是否正常。</p></li>
+<li><p>去到 <a href="https://github.com/littletool/qzone-backup">Github 代码库</a> 从 「clone or download」 那里「Download ZIP」
+<img src="static/pictures/qzone-backup-github-download.png" alt=""></p></li>
+<li><p>解压得到 qzone-backup-master 文件夹，进入这个文件夹。</p></li>
+<li><p>用 chrome 在新的 Tab 打开 <a href="chrome://extensions/">chrome://extensions/</a> </p></li>
+<li><p>勾上 「Developer mode」。
+<img src="static/pictures/chrome-extension-page.png" alt=""></p></li>
+<li><p>把刚才打开的文件夹里的 src 文件夹拖到 chrome。</p></li>
+<li><p>done.</p></li>
 </ol>
-
-<h2 id="toc_6">已知问题</h2>
-
-<ul>
-<li>只能在 Chrome 浏览器使用。</li>
-<li>这个插件不能下载通过相册生成的日志的图片，因为相册图片不是HTTPS的，程序请求不到。</li>
-<li>这个插件不能下载QQ网站以外的图片，因为插件规则不允许。</li>
-<li>当下载不到图片的时候，会在弹窗提示，这些错误最终会被跳过，生成最终的备份文件。</li>
-<li>这个插件基于QQ空间网页制作，依赖QQ空间的一些网络接口，未必长期可用。</li>
-</ul>
-
-<h2 id="toc_7">源代码</h2>
-
-<p><a href="https://github.com/littletool/qzone-backup">https://github.com/littletool/qzone-backup</a></p>
 
 
 
